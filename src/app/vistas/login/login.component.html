@@ -1,0 +1,35 @@
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="container">
+		<div class="d-flex justify-content-center h-100">
+			<div class="image_outer_container">
+				<div class="green_icon"></div>
+				<div class="image_inner_container">
+					<img src="assets/logo.png">
+				</div>
+			</div>
+		</div>
+	</div>
+  
+      <!-- Login Form -->
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" >
+        <input type="text" id="usuario" class="fadeIn second" formControlName="usuario"  placeholder="usuario">
+        <input type="password" id="password" class="fadeIn third" formControlName="password" placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+      <!-- Manejo de errores -->
+      <div class="alert  alert-danger" *ngIf="errorStatus" >
+        <p>{{errorMsj}}</p>
+      </div>
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+  
+    </div>
+  </div>

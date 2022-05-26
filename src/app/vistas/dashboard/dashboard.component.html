@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="container">
+    <h3>Lista de Pacientes </h3>
+    <button type="button" class="btn btn-primary" (click)="nuevoPaciente()" >Paciente nuevo</button>
+    <table class="table table-hover">
+       
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>DNI</th>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Codigo Postal</th>
+                <th>Telefono</th>
+                <th>Genero</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Correo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let paciente of pacientes "(click)="editarPaciente(paciente.PacienteId)">
+                <th>{{paciente.PacienteId}}</th>
+                <th>{{paciente.DNI}}</th>
+                <th>{{paciente.Nombre}}</th>
+                <th>{{paciente.Direccion}}</th>
+                <th>{{paciente.CodigoPostal}}</th>
+                <th>{{paciente.Telefono}}</th>
+                <th>{{paciente.Genero}}</th>
+                <th>{{paciente.FechaNacimiento}}</th>
+                <th>{{paciente.Correo}}</th>
+            </tr>
+        </tbody>
+
+
+</table>
+</div>
+
+<app-footer></app-footer>
